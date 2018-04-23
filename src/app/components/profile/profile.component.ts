@@ -21,20 +21,42 @@ export class ProfileComponent implements OnInit {
       this.router.navigate(['/login']);
     }
   }
-  getName(){
+  getFirstName(){
     let value = JSON.parse(localStorage.getItem('user'));
     let name = value.data.firstName;
     return name;
+  }
+  getLastName(){
+    let value = JSON.parse(localStorage.getItem('user'));
+    let name = value.data.lastName;
+    return name;
+  }
+  getEmail(){
+    let value = JSON.parse(localStorage.getItem('user'));
+    let name = value.data.email;
+    return name;
+  }
+  getVerified(){
+    let value = JSON.parse(localStorage.getItem('user'));
+    let name = value.data.verified;
+    return name;
+  }
+
+
+  getverificationToken(){
+    let value = JSON.parse(localStorage.getItem('user'));
+    let EthAddress = value.data.verificationToken;
+    return EthAddress;
   }
   getEthAddress(){
     let value = JSON.parse(localStorage.getItem('user'));
     let EthAddress = value.data.EthAddress;
     return EthAddress;
   }
-  getaccountExpiresOn(){
+  getgeneratedInvestorCode(){
     let value = JSON.parse(localStorage.getItem('user'));
-    let accountExpiresOn = value.data.accountExpiresOn;
-    return accountExpiresOn;
+    let EthAddress = value.data.generatedInvestorCode;
+    return EthAddress;
   }
   getaccountType(){
     let value = JSON.parse(localStorage.getItem('user'));
